@@ -217,6 +217,8 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from "./router/index.js";
+import '@/styles/reset.css'
+
 // 全局导入图标
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
@@ -235,5 +237,32 @@ app.mount('#app')
 
 ~~~html
 <el-icon><InfoFilled /></el-icon>
+~~~
+
+## Tailwind CSS
+
+添加依赖：
+
+~~~shell
+yarn add tailwindcss @tailwindcss/vite
+~~~
+
+修改 vue.config.js
+
+~~~javascript
+import {defineConfig} from 'vite'
+import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+    plugins: [vue(), tailwindcss()],
+})
+~~~
+
+在 style.css 进行配置：
+
+~~~css
+@import "tailwindcss";
 ~~~
 
