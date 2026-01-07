@@ -202,6 +202,12 @@ export default defineConfig({
 })
 ~~~
 
+有时候样式不生效，在 main.js 添加
+
+~~~shell
+import 'element-plus/dist/index.css'
+~~~
+
 ### 添加图标
 
 [Icon 图标 | Element Plus](https://element-plus.org/zh-CN/component/icon)
